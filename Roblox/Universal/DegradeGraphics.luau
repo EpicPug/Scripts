@@ -1,9 +1,11 @@
 --!strict
 
+--!strict
+
 const Workspace = game:GetService("Workspace")
 
 const function handleInstance(instance: Instance)
-	if instance:IsA("PostEffect") then
+	if instance:IsA("PostEffect") or instance:IsA("Light") then
 		instance.Enabled = false
 	end
 end
@@ -14,6 +16,6 @@ end
 
 Workspace.ChildAdded:Connect(handleInstance)
 
-for _, instance in Workspace:QueryDescendants("") do
+for _, instance in game:QueryDescendants("PostEffect, Light") do
 	handleInstance(instance)
 end
