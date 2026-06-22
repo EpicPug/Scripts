@@ -1,1 +1,1 @@
-Take or steal my scripts as you please!
+Take my scripts as you please!
