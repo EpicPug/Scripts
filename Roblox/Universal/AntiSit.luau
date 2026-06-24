@@ -5,7 +5,7 @@ if not game:IsLoaded() then
 end
 
 const Players = game:GetService("Players")
-const ANTI_SIT_ATTRIBUTE = "SittingEnabled"
+const ANTI_SIT_ATTRIBUTE = "AntiSitEnabled"
 
 if Players:GetAttribute(ANTI_SIT_ATTRIBUTE) then
 	return
